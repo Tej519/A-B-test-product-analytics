@@ -1,7 +1,6 @@
 # A/B Test Analysis: E-commerce Checkout Redesign
 
-**A complete product analytics project — from hypothesis to recommendation**
-
+Author: Adithya Machavaram
 ---
 
 ## Dashboard Preview
@@ -153,4 +152,3 @@ This project simulates exactly that. I ran an A/B test on 100,000 users, analyze
 - Clear communication — executive summary, stakeholder-friendly dashboard
 
 
-## What You'll Find in This Repository
