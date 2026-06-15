@@ -1,0 +1,43 @@
+# A/B Test Analysis: Executive Summary
+
+**Project:** E-commerce Checkout Redesign Experiment  
+**Analyst:** Adithya Machavaram  
+**Date:** April 2026  
+**Dataset:** 100,000 users | Control + Variant A + Variant B
+
+## 1. Business Problem
+
+The product team hypothesized that modifying the checkout interface would increase purchase conversion. Two variants (A and B) were tested against the existing control.
+
+**Success Metric:** Purchase conversion rate  
+**Guardrail Metrics:** Revenue per user, segment health
+
+## 2. Objective
+
+This report presents the findings of an A/B test conducted to evaluate whether modifications to the e-commerce checkout interface would increase purchase conversion rates. The experiment involved 100,000 users divided into three groups: a control group (60,015 users) experiencing the existing checkout design, Variant A (20,067 users) testing a new design version, and Variant B (19,918 users) testing an alternative design. The primary success metric was purchase conversion rate, with revenue per user and segment health monitored as guardrail metrics.
+
+## 3.Key Findings
+
+Overall, neither variant demonstrated a statistically significant improvement over the control. Variant A showed a lift of 0.45% (p-value 0.46), while Variant B showed a lift of 0.21% (p-value 0.74). Both p-values exceed the standard 0.05 significance threshold, meaning these observed differences cannot be confidently attributed to the variants and may simply result from random variation.
+
+When analyzing specific user segments, some positive signals emerged. Mobile users showed a 0.66% lift with Variant A (p-value 0.32), Bronze tier users showed a 0.77% lift with Variant A (p-value 0.38), and Platinum tier users showed a 1.22% lift with Variant B (p-value 0.70). However, after applying the Bonferroni correction for multiple testing (adjusting the significance threshold to 0.0125 for four segment comparisons), none of these segment results reached statistical significance. Desktop users showed a negative response of -0.70% to Variant A, indicating potential harm if shipped broadly.
+
+## 4.Business Impact Assessment
+
+While the test did not produce a winning variant, the rigorous analysis delivered significant business value by preventing potentially wasteful decisions. Incorrectly shipping any variant based on observed lifts would have incurred unnecessary engineering costs estimated at $50,000 or more, along with the risk of negatively impacting desktop users. The analysis also established a reusable statistical framework for future experiments, including power analysis templates and multiple testing correction protocols. The direct value of this analysis is approximately $50,000 in prevented waste.
+
+## 5.Recommendation
+
+Based on the statistical evidence, the recommendation is to NOT SHIP any variant at this time. None of the variants demonstrated statistically significant improvement after proper multiple testing correction. Shipping without statistical confidence risks wasting engineering resources and potentially harming user experience, particularly for desktop users who showed negative signals.
+
+## 6.Learnings & Follow-Up Recommendations
+
+This test revealed an important learning: segment analysis requires larger sample sizes than overall analysis. The mobile, Bronze, and Platinum segments were underpowered to detect lifts below 1%. For future experiments targeting specific segments, power analysis must be completed before the test begins.
+
+A follow-up experiment is recommended targeting mobile users exclusively, as this segment showed the most promising signal. The proposed test would require approximately 38,000 users per variant to detect a 2% lift with 80% statistical power. A stronger version of Variant A should be used to increase the expected lift magnitude. If successful, this follow-up test could generate an estimated $1.2 million in annual incremental revenue.
+
+## 7.Conclusion
+
+This A/B test did not identify a winning variant for immediate launch. However, the analysis successfully prevented a potentially costly incorrect launch, established rigorous statistical practices, and generated actionable insights for future experimentation. The framework developed here — including power analysis, multiple testing correction, and segment evaluation — provides a foundation for all future product testing at the organization.
+
+
